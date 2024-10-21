@@ -1,0 +1,44 @@
+/* src/App.css */
+body {
+  background-color: #f0f0f0; /* Fundo cinza claro */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ajuste para preencher a tela */
+  position: relative; /* Necessário para posicionar o rodapé */
+}
+
+.title {
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  margin-top: -100px; /* Ajuste para elevar o título ainda mais */
+  text-align: center; /* Centraliza o título */
+}
+
+.upload-button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.link {
+  margin-top: 20px; /* Espaço acima do link */
+  color: blue;
+  text-decoration: underline;
+}
+
+.footer-text {
+  position: absolute; /* Para posicionar no rodapé */
+  bottom: 10px; /* Distância do rodapé */
+  right: 10px; /* Alinha à direita */
+  margin: 0; /* Remove margem padrão */
+}

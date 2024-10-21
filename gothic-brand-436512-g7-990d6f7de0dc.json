@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "gothic-brand-436512-g7",
+  "private_key_id": "990d6f7de0dcc29dab2bb4ddcd6144c7bd1e726d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCxiqplyA3FFZsm\nugxM9nIGwkJUUjcms8ui9Ikpq7LHli/OZLhdDVRelKCbgnTV54tua6lgHUyJy0Tt\n/85Vo6AaDOe8ER6FoDjg5gMPSXDgKjZQJIg+cCg0mouAa8m3D4zR+0T1vmhbF6Nr\nTP3N4+rRhj4NNrVusDy7jGdtBzVaFJNugh6PzSMcYchM47tkg7JfKCsx6ZCl+bze\n1F110vJ28iqboVsRpy68jxt+6MwLkJ9SNIb1rRH/GXQ2vgpwq+OQIm8LEq/y+Ye1\nOeAUw3MJvckefGvjZZrTWe59I+sAsdQc+JBpcWUCdLb7bVWQxIkx9K8ChDPPiF51\nlb1omzXVAgMBAAECggEAM+IiCbx8yauWu6qDDbq3d+ItIBcmptjEGcr8ioDyrgDl\n15r3hbnvffRROyDUo+4WgR5VURE+3MXaTvMCiWRX1UUQM5WNJd+8v3x4SG9d3SR4\n2tLSPezo0vaW7eCSAj05GeQkMuyB8pzl1OWbBiAk7zYbzCDAxKgcF3Lghqwkmz4L\neUWAVIdtAkJYSAIWrscUOoT5xu0fziqe+dTUjURAyYNTYJTQZJJpKYUXxt5yIMoz\nT3HaAuOiL3k8lEZZ7AounhtmK5u2oS9Bk9MPIY9IJUDLHIpzOXX1RAJ9Z2GfvmZl\nvjGfjqZBYeSUm501lY9FKrB9WNM0rBJEBV8TmN1nwQKBgQDYbYANJmAEYbmnTMU7\ns2jR8CI0LZughuydjfVbm+B9k1NaqAfj1AsO3/l/KIroxrzIB0lnSXv1sypDpgP2\n3hot+HcZlbhQgSVfQy2UCLSxLP9yNBaXmE5S2nGJGK9rn0FmXsw+QzRBgIJOobpP\nc4gTiiQEYezDC6Ck2e/SvGdqWwKBgQDSAP67TYUNfX/H5Jr8ywNPn6mEOXcf4HZi\nMnN0B2IfKG5OS5qFqIGiluMDeckhFkDb3msasLbskAFr1wzeEtXKcNNFHFvXCc9q\nfVIxQHn9QciZrZW9JK+Sep87++L423nIk00SoH5eNl8t9jn1ZT6rNAlyrunQKPjV\nTwq+FPv3jwKBgQCW2Is9nxehNjPd5WY63Csc2BAe6gLkeeYFUmJGvXhUThD0yNTm\n+G3UqksNU8atw4bkrB9/O/qIH54/lECDGf6JN/pa/L2AbuMLaJkl6oN2UfShNqjg\ndClzGgm0El6B1ngQz9XvN4v+c4FfKN3gbpfTdp7v5wjMURhgjf3XlbVGrQKBgDoJ\njFy3T84qoOXdh/fVI1UeCvs/5mwo3I7G4qFuaO+zfMimnE3UA/+rM5ICVlOOkt4w\n2ejGbcdzBPGIvUWibvNDux+edsM3Mtt7RvvVleEoDQhrsLZVLTCOMvOg6VldTorg\nKqy7LjFbVXKeWeY31Nn7x6CqNnQQ3rQU5CMkKX6BAoGAbWghom47Brjnh1NWM4J9\n5fx+6HdigXJWb8vcl+QLoCi9QfVSTefvNRMQ6kPgx2zQ9AaPpXsrDwI2DS1eB6nL\nmVz49SQz+B/+t42xOD83qacFqt6cWK9mdtSbjP878j+DFeNN1DdqNWPZXkJOE5Le\nHOBUe7bq2OUeNqaCy6QmJPM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "socio-economico-fatec@gothic-brand-436512-g7.iam.gserviceaccount.com",
+  "client_id": "111257959326034561318",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/socio-economico-fatec%40gothic-brand-436512-g7.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

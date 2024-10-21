@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Gráficos Socioeconômicos - Fatec</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            /* Fundo cinza claro */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            /* Ajuste para preencher a tela */
+            position: relative;
+            /* Necessário para posicionar o rodapé */
+        }
+
+        .title {
+            margin-bottom: 20px;
+            /* Espaço abaixo do título */
+            margin-top: -100px;
+            /* Ajuste para elevar o título ainda mais */
+            text-align: center;
+            /* Centraliza o título */
+        }
+
+        .upload-button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .link {
+            margin-top: 20px;
+            /* Espaço acima do link */
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .footer-text {
+            position: absolute;
+            /* Para posicionar no rodapé */
+            bottom: 10px;
+            /* Distância do rodapé */
+            right: 10px;
+            /* Alinha à direita */
+            margin: 0;
+            /* Remove margem padrão */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-container">
+        <h3 class="title">ATUALIZAR GRÁFICOS SÓCIO ECONÔMICOS - FATEC</h3>
+        <input type="file" accept=".xlsx, .xls" id="fileInput" />
+        <br>
+        <button id="uploadButton" class="upload-button">ATUALIZAR BASE</button>
+        <br><br>
+        <button id="updateGraphsButton" class="upload-button">ATUALIZAR GRÁFICOS</button>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiMWU1ZTc3NTUtYzg0ZC00ZDkwLThjNmYtMDhjNDU3ZmIyNzZlIiwidCI6IjczNDYxNGYzLTIzYWUtNDQ4Mi05NDg1LWJhN2MxYmJmNTdmYiJ9"
+            class="link" target="_blank" rel="noopener noreferrer">Acesse o BI</a>
+        <p class="footer-text">Desenvolvido por Davi, Elen, Adriely e Selton</p>
+    </div>
+    <script>
+        document.getElementById('uploadButton').addEventListener('click', async () => {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert("Por favor, anexe uma planilha.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("planilha", file);
+
+            try {
+                const response = await fetch("http://localhost:5000/api/upload", {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+                if (response.ok) {
+                    alert("Planilha atualizada com sucesso!");
+                } else {
+                    alert("Erro ao atualizar a planilha.");
+                }
+            } catch (error) {
+                console.error(error);
+                alert("Erro ao atualizar a planilha.");
+            }
+        });
+
+        document.getElementById('updateGraphsButton').addEventListener('click', async () => {
+            try {
+                const response = await fetch('http://localhost:5000/atualiza-graficos', {
+                    method: 'POST',
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log(data);
+                    if (data.message === 'OK') {  // Verifique se a comparação está correta
+                        alert('Gráficos atualizados com sucesso! Aguarde 5 minutos para o processamento dos dados no BI');
+                    } else {
+                        alert('Erro ao atualizar gráficos.');
+                    }
+                } else {
+                    alert('Erro ao atualizar gráficos.'); // Aqui você pode detalhar o erro se quiser
+                }
+
+            } catch (error) {
+                console.error('Erro ao atualizar os gráficos:', error);
+                alert('Erro ao atualizar os gráficos.');
+            }
+        });
+    </script>
+</body>
+
+</html>
